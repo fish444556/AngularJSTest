@@ -1,3 +1,15 @@
 <div class="mail-controller">
-    Mail
+	<div class="to">
+		To: {{to}}
+	</div>
+	<div class="subject">
+		Subject: {{subject}}
+	</div>
+	<div class="text">
+		<article>
+			{{text}}
+		</article>
+		<input type="button" ng-click="viewMail('next')" name="next" value="NEXT">
+		<input type="button" ng-click="viewMail('prev')" name="prev" value="PREV">
+	</div>
 </div>

@@ -13,6 +13,9 @@ header > a {
 	color: black;
 }
 
+/* TODO
+	changed color after clicking the a
+ */
 header > a:link {
 	background-color: lightblue;
 	text-decoration: none;
@@ -51,25 +54,41 @@ table input {
 }
 
 
-.create-controller {
+.create-controller, .mail-controller {
 	font-size: 24px;
 	// padding: 20px;
 }
 
-.create-controller div {
+.create-controller div, .mail-controller div {
 	margin: 15px 0;
 	padding: 0 20px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid black;
 }
 
+.create-controller div:last-child, .mail-controller div:last-child {
+	min-height: 260px;
+}
+
+.mail-controller div:last-child article {
+	min-height: 200px;
+}
+
+.mail-controller div:last-child input {
+	float: right;
+	margin: 5px;
+}
+
+.mail-controller div:last-child input:hover {
+	background-color: #41b5f4;
+}
 .create-controller textarea {
 	border: 1px solid black;
 	width: 100%;
 	display: block;
 }
 
-.create-controller .content input {
+.create-controller .text input {
 	margin: 10px 0;
 	float: right;
 	background-color: lightblue;
@@ -88,4 +107,5 @@ table input {
 	margin: 20px;
 	text-decoration: none;
 	color: white;
+	font-size: 24px;
 }

@@ -5,7 +5,7 @@ angular.module('app')
 
     $scope.viewMail = function(mail) {
         console.log(mail);
-
+        $location.path('mail/' + `${mail.id}`);
     };
 
     $scope.checkedMailFunc = function (mail) {

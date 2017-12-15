@@ -6,15 +6,12 @@
     </colgroup>
     <tbody>
         <tr ng-repeat="mail in mails"
-            href="#!mail/:{{mail.id}}"
             ng-click="viewMail(mail)">
-            <!-- <a > -->
                 <td class="text-center">
                     <input type="checkbox" ng-click="checkedMailFunc(mail); $event.stopPropagation();"/>
                 </td>
                 <td>{{mail.to}}</td>
                 <td>{{mail.subject}}</td>
-            <!-- </a> -->
         </tr>
     </tbody>
 </table>
