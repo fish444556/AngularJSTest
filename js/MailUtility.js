@@ -37,5 +37,13 @@ angular.module('app')
         mails.push(mail);
     };
 
+    module.deleteMails = function (deleteIdArray) {
+        debugger
+        let newMailArray = mails.filter(mail => {
+            return deleteIdArray.indexOf(mail.id) < 0;
+        })
+        mails = newMailArray;
+    }
+
     return module;
 });

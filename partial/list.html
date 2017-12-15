@@ -10,7 +10,7 @@
             ng-click="viewMail(mail)">
             <!-- <a > -->
                 <td class="text-center">
-                    <input type="checkbox" />
+                    <input type="checkbox" ng-click="checkedMailFunc(mail); $event.stopPropagation();"/>
                 </td>
                 <td>{{mail.to}}</td>
                 <td>{{mail.subject}}</td>
@@ -18,3 +18,4 @@
         </tr>
     </tbody>
 </table>
+<input class="list-controller-delete" type="button" value="DELETE" ng-click="deleteCheckedMail()"/>

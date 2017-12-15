@@ -1,22 +1,25 @@
 angular.module('app')
 .controller('ListController', function($scope, MailUtility, $location) {
-	$scope.checkedMail = new Set();
+	$scope.checkedMails = new Set();
     $scope.mails = MailUtility.getMails();
 
     $scope.viewMail = function(mail) {
         console.log(mail);
-        console.log($scope.mails)
-        // if ($scope.checkedMail.indexOf(mail.id) > 0) {
-        // 	$scope.checkedMail.re
-        // }
-        // debugger
-        // $location.path('fdsfdfdsfdsfds');
-        if ($scope.checkedMail.has(mail.id)) {
-        	$scope.checkedMail.delete(mail.id);
+
+    };
+
+    $scope.checkedMailFunc = function (mail) {
+        if ($scope.checkedMails.has(mail.id)) {
+            $scope.checkedMails.delete(mail.id);
         }
         else {
-        	$scope.checkedMail.add(mail.id);
+            $scope.checkedMails.add(mail.id);
         }
-        console.log($scope.checkedMail);
-    };
+        console.log($scope.checkedMails);
+    }
+
+    $scope.deleteCheckedMail = function () {
+        MailUtility.deleteMails([...$scope.checkedMails])
+        $scope.mails = MailUtility.getMails();
+    }
 });

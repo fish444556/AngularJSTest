@@ -80,3 +80,12 @@ table input {
 .create-controller br {
 	clear: both;
 }
+
+.list-controller-delete {
+	background-color: red;
+	float: right;
+	padding: 10px;
+	margin: 20px;
+	text-decoration: none;
+	color: white;
+}
