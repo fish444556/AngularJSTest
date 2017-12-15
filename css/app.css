@@ -13,9 +13,21 @@ header > a {
 	color: black;
 }
 
-header > a:hover {
+header > a:link {
 	background-color: lightblue;
 	text-decoration: none;
+}
+header > a:visited {
+	background-color: #41b5f4;
+	// font-size: 50px;
+}
+header > a:hover {
+	background-color: #41b5f4;
+}
+
+header > a:active {
+	// font-size: 30px;
+	background-color: #41b5f4;
 }
 
 .header-directive {
@@ -39,6 +51,32 @@ table input {
 }
 
 
-/*  .list-controller {
-	background-color: green;
-} */
+.create-controller {
+	font-size: 24px;
+	// padding: 20px;
+}
+
+.create-controller div {
+	margin: 15px 0;
+	padding: 0 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;
+}
+
+.create-controller textarea {
+	border: 1px solid black;
+	width: 100%;
+	display: block;
+}
+
+.create-controller .content input {
+	margin: 10px 0;
+	float: right;
+	background-color: lightblue;
+	text-decoration: none;
+	padding: 8px;
+}
+
+.create-controller br {
+	clear: both;
+}
