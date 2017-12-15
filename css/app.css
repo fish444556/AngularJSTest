@@ -1,0 +1,44 @@
+header {
+	display: flex;
+
+}
+
+header > a {
+	flex: 1;
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px;
+	font-size: 25px;
+	text-decoration: none;
+	color: black;
+}
+
+header > a:hover {
+	background-color: lightblue;
+	text-decoration: none;
+}
+
+.header-directive {
+
+}
+
+table {
+    font-size: 24px;
+    width: 100%;
+}
+
+table tr {
+    cursor: pointer;
+    height: 60px;
+    border-bottom: 2px solid #111;
+}
+
+table input {
+    position: relative;
+    top: -3px;
+}
+
+
+/*  .list-controller {
+	background-color: green;
+} */
